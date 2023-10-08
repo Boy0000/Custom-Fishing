@@ -23,9 +23,11 @@ import net.momirealms.customfishing.api.integration.LevelInterface;
 import net.momirealms.customfishing.api.integration.SeasonInterface;
 import net.momirealms.customfishing.api.manager.IntegrationManager;
 import net.momirealms.customfishing.api.util.LogUtils;
+import net.momirealms.customfishing.compatibility.block.GearyBlockImpl;
 import net.momirealms.customfishing.compatibility.block.ItemsAdderBlockImpl;
 import net.momirealms.customfishing.compatibility.enchant.AdvancedEnchantmentsImpl;
 import net.momirealms.customfishing.compatibility.enchant.VanillaEnchantmentsImpl;
+import net.momirealms.customfishing.compatibility.entity.GearyEntityImpl;
 import net.momirealms.customfishing.compatibility.entity.ItemsAdderEntityImpl;
 import net.momirealms.customfishing.compatibility.entity.MythicEntityImpl;
 import net.momirealms.customfishing.compatibility.item.*;
@@ -77,6 +79,12 @@ public class IntegrationManagerImpl implements IntegrationManager {
         if (plugin.isHookedPluginEnabled("Oraxen")) {
             plugin.getItemManager().registerItemLibrary(new OraxenItemImpl());
             hookMessage("Oraxen");
+        }
+        if (plugin.isHookedPluginEnabled("Geary")) {
+            plugin.getItemManager().registerItemLibrary(new GearyItemImpl());
+            plugin.getBlockManager().registerBlockLibrary(new GearyBlockImpl());
+            plugin.getEntityManager().registerEntityLibrary(new GearyEntityImpl());
+            hookMessage("Geary");
         }
         if (plugin.isHookedPluginEnabled("Zaphkiel")) {
             plugin.getItemManager().registerItemLibrary(new ZaphkielItemImpl());

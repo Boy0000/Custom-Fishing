@@ -29,6 +29,12 @@ dependencies {
     compileOnly("com.willfp:EcoSkills:3.21.0")
     compileOnly("com.willfp:libreforge:4.34.0")
 
+    // geary
+    compileOnly("com.mineinabyss:idofront-util:0.18.27")
+    compileOnly("com.mineinabyss:geary-papermc:0.25.1")
+    compileOnly("com.mineinabyss:blocky:0.8.0")
+    compileOnly("com.mineinabyss:mobzy:0.20.4")
+
     // database
     compileOnly("org.xerial:sqlite-jdbc:3.42.0.0")
     compileOnly("com.h2database:h2:2.2.220")

@@ -38,6 +38,8 @@ allprojects {
         maven("https://repo.william278.net/releases/")
         maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
         maven("https://repo.minebench.de/")
+        maven("https://repo.mineinabyss.com/releases")
+        maven("https://repo.mineinabyss.com/snapshots")
     }
 }
 
